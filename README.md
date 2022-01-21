@@ -1,1 +1,1 @@
-# stepik_auto_tests_course
+#This repository contains tasks from Stepik test Automation course ♥
