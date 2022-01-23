@@ -34,13 +34,9 @@ try:
     button1 = browser.find_element(By.ID, 'robotCheckbox')
     button1.location_once_scrolled_into_view
     button1.click()
-
     button2 = browser.find_element(By.ID, 'robotsRule')
-    button2.location_once_scrolled_into_view
     button2.click()
-
     button3 = browser.find_element(By.CLASS_NAME, 'btn.btn-primary')
-    button3.location_once_scrolled_into_view
     button3.click()
 
     time.sleep(10)

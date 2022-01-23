@@ -6,19 +6,19 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 browser = webdriver.Chrome(ChromeDriverManager().install())
 
-link = "http://suninjuly.github.io/registration2.html"
+link = "http://suninjuly.github.io/registration1.html"
 
 try:
     browser.get(link)
 
-    elements = browser.find_elements(By.CSS_SELECTOR, 'input:required')
-    for element in elements:
-        element.send_keys("Text")
-    time.sleep(1)
+    name = browser.find_element(By.XPATH, '//input[@placeholder="Input your first name"]')
+    name.send_keys("text")
+    last_name = browser.find_element(By.XPATH, '//input[@placeholder="Input your last name"]')
+    last_name.send_keys("text")
+    email = browser.find_element(By.XPATH, '//input[@placeholder="Input your email"]')
+    email.send_keys("text")
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
-
-    time.sleep(1)
 
     welcome_text_elt = browser.find_element(By.TAG_NAME, "h1")
     welcome_text = welcome_text_elt.text
